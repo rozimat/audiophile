@@ -1,0 +1,151 @@
+.hero{
+  background-color:  #0E0E0E;
+  max-width: 1440px;
+  height: 729px;
+  margin-bottom: 120px;
+  &__right--img{
+    width: 550px;
+  }
+}
+.header{
+  max-width: 1110px;
+  height: 97px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid $white;
+  &__link{
+    margin-right: 179px; 
+  }
+  &__menu{
+    display: none;
+  }
+}
+.links{
+  display: block;
+  &__item{
+    margin-right: 34px;
+    color: $white;
+  
+  }
+  &__item:hover{
+    color: $bronzeopa;
+  }
+}
+.hero__left{
+  max-width: 1440px;
+  height: 639px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-image: url(./../../images/player.png);
+  background-repeat: no-repeat; 
+  background-position: right;
+  background-size: 50%;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  &--heading{
+    margin: 0;
+    width: 396px;
+    color: $white;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 58px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
+  &--text{
+    color: $white;
+    opacity: 0.75;
+    width: 349px;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 25px;
+    margin-bottom: 40px;
+   
+  }
+
+}
+.text__span{
+  color: $bronze;
+  opacity: 0.5;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  letter-spacing: 10px;
+}
+/*responsive 876px*/
+
+
+
+/*responsive 768px*/
+@media only screen and (max-width: 768px) {
+  .header{
+    &__link{
+      margin-right: 0;
+      padding-left: 30px;  
+      
+    }
+    &__menu{
+      display: block;
+      background-color: aqua;
+      position: relative;
+    }
+    &__menu::before{
+      content: "";
+      width: 24px;
+      height: 24px;
+      background-image: url(./../../images/gamburger.png);
+      @include bg-img;
+      position: absolute;
+      transform: translateY(-10px);
+      
+    } 
+    .links{
+      display: block;
+      position: absolute; 
+      top: 70px;
+      flex-direction: column;
+      background-color: gray;
+      width: 150px;
+      height: 100px;
+      border-radius: 10px;
+      padding: 10px;
+      border: 1px solid blue;
+     
+      &__item:hover{
+        font-size: 12px;
+      }
+    }
+  }
+  .hero__left{
+    align-items: center;
+    background-position: center;
+    background-size: 100%;
+  }
+}
+.header__menu:hover{
+  background-color: aqua;
+  width: 24px;
+  height: 24px;
+}
+/*responsive 375px*/
+@media only screen and (max-width: 768px) {
+  .hero{
+    &__left{
+      &--heading{
+        letter-spacing: 1.28571px;
+        font-size: 36px;
+        text-align: center;
+      }
+      &--text{
+        font-size: 15px;
+        width: 328px;
+        text-align: center;
+        
+      }
+    }
+  }
+}

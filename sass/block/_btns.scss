@@ -1,0 +1,45 @@
+.btn{
+  @include btns;
+  background-color: $bronze;
+  color: $white;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 18px;
+}
+.btn:hover{
+  background-color: $bronzeopa;
+} 
+.btn2{
+  @include btns;
+  background-color: $white;
+  color: $black;
+  border: 1px solid $black;
+}
+.btn2:hover{
+  background-color: $black;
+  color: $white;
+  
+} 
+.link{
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: $black;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+ 
+  position: relative;
+}
+.link:hover{
+  color: $bronze;
+}
+.link::after{
+  content: "";
+  width: 5px;
+  height: 10px;
+  background-image: url(./../../images/enter.png);
+  @include bg-img;
+  position: absolute;
+  left: 75%;
+  bottom: 30%;
+
+}

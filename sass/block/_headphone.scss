@@ -1,0 +1,107 @@
+.headphone{
+  height: 336px;
+}
+.header__heading--title{
+  color: $white;
+  text-align: center;
+  margin-top: 98px;
+}
+.main__headphone{
+  max-width: 1110px;
+  height: 561px;
+  margin-top: 100px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  
+
+  &--left{
+    width: 545px;
+    height: 100%;
+    background-color: $whitesmoke;
+    position: relative;
+    
+  }
+  &--left::before{
+    content: "";
+    width: 349px;
+    height: 386px;
+    position: absolute;
+    background-image: url(./../../images/hearingplayer.png);
+    @include bg-img;
+    background-size: 200px;
+    left: 15px;
+    transform: translateX(55px);
+  }
+  
+  &--right{
+    width: 545px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   
+    &__heading{
+      width: 120px;
+    }
+    &__text{
+      width: 447px;
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+  }
+}
+@media only screen and (max-width: 768px) {
+  .headphone{
+    
+  }
+  .header__heading--title{
+
+  }
+  .main__headphone{
+    flex-direction: column;
+    &--left{
+
+    }
+    &--left::before{
+
+    }
+    
+    &--right{
+
+      &__heading{
+       
+      }
+      &__text{
+     
+      }
+    }
+  }
+}
+@media only screen and (max-width: 375px) {
+  .headphone{
+    
+  }
+  .header__heading--title{
+
+  }
+  .main__headphone{
+
+    &--left{
+
+    }
+    &--left::before{
+
+    }
+    
+    &--right{
+
+      &__heading{
+       
+      }
+      &__text{
+     
+      }
+    }
+  }
+}

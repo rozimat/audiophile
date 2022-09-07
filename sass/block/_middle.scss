@@ -1,0 +1,309 @@
+.main{
+  background-color: $white;
+  margin: 0 auto;
+  &__one{
+    max-width: 1111px;
+    height: 283px;
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    gap: 30px;
+    &--left__heading{
+      margin-bottom: 20px;
+    }
+    &--left::before{
+      background-image: url(./../../images/headfpfones.png);
+    }
+    &--middle::before{
+      background-image: url(./../../images/speaker.png);
+    }
+    &--right::before{
+      background-image: url(./../../images/earphones.png);
+    }
+  }
+}
+.one__box{
+  width: 350px;
+  height: 204px;
+  border-radius: 8px;
+  background-color:$smoke;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: flex-end;
+  padding-bottom: 24px;
+  position: relative;
+}
+.one__box::before{
+  content: "";
+  display: block;
+  width: 122px;
+  height: 160px;
+  @include bg-img;
+  position: absolute;
+  background-position: top;
+  bottom: 55%;
+  transform: translateX(85%);
+}
+@media  only screen and (max-width: 768px) {
+  .main__one{  
+  }
+  .one__box{
+    width: 240px;
+    padding: 0;
+    padding: 0px 55px 22px 55px;
+    &--left__heading{
+      margin-top: 40px;
+    }
+  }
+  .one__box::before{
+    transform: translateX(5%);
+  }
+}
+@media  only screen and (max-width: 375px) {
+  .main__one{
+    height: 800px;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+    .one__box{
+      width: 350px;
+    }
+    .one__box::before{
+     transform: translateX(70px);
+  }
+  }
+}
+.main{
+  &__two{
+    max-width: 1110px;
+    height: 560px;
+    margin-top: 168px;
+    margin-bottom: 50px;
+    padding: 100px 100px 0px 100px;
+    background-color: $bronze;
+    border-radius: 8px;
+    background-image: url(./../../images/speaker.png);
+    background-position: left 100px bottom -20px;
+    background-size: 400px;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    &--wrapper{
+
+    }
+    &--heading{
+      width: 261px;
+      font-weight: 700;
+      font-size: 56px;
+      line-height: 58px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: $white;
+     
+    }
+    &--text{
+      width: 300px;
+      font-weight: 500;
+      font-size: 15px;
+      line-height: 25px;
+      color: $white;
+      opacity: 0.75;
+      margin-top: 24px;
+      margin-bottom: 40px;
+    }
+  }
+}
+@media  only screen and (max-width: 768px){
+  .main__two{
+    height: 720px;
+    align-items: center;
+    text-align: center;
+    background-position: 45% 15%;
+    background-size: 200px;
+    justify-content: flex-end;
+    padding-bottom: 65px;
+  }
+}
+.main__three{
+  max-width: 1110px;
+  height: 332px;
+  background-color: #dbe0e4fa;
+  border-radius: 8px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  padding-left: 100px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 50px;
+  background-image: url(./../../images/polomusik.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right;
+ &--wrapper{
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+ }
+}
+@media  only screen and (max-width: 768px) {
+  .main__three{
+   background-size: 700px;
+  }
+}
+@media  only screen and (min-width: 375px) {
+  .main__three--wrapper{
+    background-size: 200px;
+  }
+}
+.main__four{
+  max-width: 1110px;
+  height: 322px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 150px;
+  &--right{
+    width: 540px;
+    height: 322px;
+    background-color: #fafafa;
+    border-radius: 8px;
+    padding: 100px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    &__heading{
+      font-weight: 700;
+      font-size: 28px;
+      line-height: 38px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+    }
+  &--left{
+    width: 540px;
+    height: 322px;
+    border: 1px solid black;
+    border-radius: 8px;
+    background-image: url(./../../images/bitmap.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .main__four{
+    
+    &--right{
+      padding: 0;
+      padding: 150px 40px 40px 40px;
+      &__heading{
+    
+      }
+    }
+    &--left{
+      background-size: 600px;
+    }
+  }
+}
+@media only screen and (max-width: 375px) {
+  .main__four{
+    flex-wrap: wrap;
+    &--right{
+      padding: 0;
+      padding: 150px 25px 40px 25px;
+      &__heading{
+        width: 280px;
+      }
+    }
+    &--left{
+      background-size: 600px;
+    }
+  }
+}
+.main__five{
+  max-width: 1110px;
+  height: 588px;
+  display: flex;
+  border-radius: 8px;
+  gap: 30px;
+  &--orange{
+    color: $bronze;
+  }
+  &--left{
+    width: 50%;
+    padding: 150px 0px;
+    &__heading{
+      width: 445px;
+      font-weight: 700;
+      font-size: 40px;
+      line-height: 44px;
+      letter-spacing: 1.42857px;
+      text-transform: uppercase;
+      margin-bottom: 30px;
+    }
+    &__text{
+      width: 445px;
+      font-weight: 500;
+      font-size: 15px;
+      line-height: 25px;
+      mix-blend-mode: normal;
+      opacity: 0.5;
+    }
+  }
+  &--right{
+    width: 50%;
+    height: 100%;
+    background-image: url(./../../images/lisinings.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 8px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .main__five{
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    &--left{
+      width: 730px;
+      padding: 0;
+      height: 400px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      &__heading,  &__text{
+        width: 573px;
+      }
+    }
+    &--right{
+      width: 730px;
+      height: 300px;
+    }
+  }
+}
+@media only screen and (max-width: 375px) {
+  .main__five{
+    margin-top: 400px;
+    &--left{
+    
+      &__heading,  &__text{
+        width: 326px;
+      }
+    }
+    &--right{
+      width: 326px;
+      height: 300px;
+      
+    }
+  }
+}
